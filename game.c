@@ -189,6 +189,8 @@ int main(int argc, char *argv[])
 			{
 				puts("room30");
 				gameroom30();
+				puts("If you would like to choose a new door, please select a door number. Otherwise, you can quit by selecting option 99.");
+				scanf("%d",&choice);
 				break;
 			}
 			case 31:
