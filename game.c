@@ -29,13 +29,15 @@ int main(int argc, char *argv[])
 	printf("Please enter your name: ");
 	scanf("%s",name);
 	printf("Hello %s welcome to the RPG Game!\n",name);
+	
+	puts("You find yourself in a dark room and you are not sure how you got here.");
+	puts("As you look around you see the room has 75 doors, each labeled with a number.");
+	puts("The room starts filling with water and a loud voice tells you that you must choose a door to open and enter or you will likely drown. you may quit anytime by selecting option 99.");
+	puts("What door do you choose?");
+	scanf("%d",&choice);
+	
 	while(choice != 99)
 	{
-		puts("You find yourself in a dark room and you are not sure how you got here.");
-		puts("As you look around you see the room has 75 doors, each labeled with a number.");
-		puts("The room starts filling with water and a loud voice tells you that you must choose a door to open and enter or you will likely drown. you may quit anytime by selecting option 99.");
-		puts("What door do you choose?");
-		scanf("%d",&choice);
 		switch(choice)
 		{
 			case 1:
