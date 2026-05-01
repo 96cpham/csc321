@@ -707,6 +707,3 @@ void gameroom30(void)
 		}
 	}
 		
-return;
-		
-}
