@@ -16,8 +16,8 @@
 //place function prototypes here
 
 
-void printStudent30()
-void gameroom30(void)
+void printStudent30();
+void gameroom30(void);
 
 
 int main(int argc, char *argv[])
@@ -429,7 +429,6 @@ int main(int argc, char *argv[])
 void printStudent30()
 {
 	printf("Printing out my initials, CP");
-	return;
 }
 
 void gameroom30(void)
@@ -437,6 +436,7 @@ void gameroom30(void)
 	//CHOICE 1 : CHEST (uses loop)
 		puts("You see two chests in the room, one is ornate, guilded with gold and precious stones, the other is a simple wooden chest with no adornments. Which chest do you open? (1: choose the ornate chest, 2: choose the simple chest)");
 		int playerChoice = 0;
+		bool inspiration = false;
 		scanf("%d",&playerChoice);
 		while (playerChoice != 1 && playerChoice != 2)
 		{
@@ -453,7 +453,7 @@ void gameroom30(void)
 			case 2:
 			{
 				puts("You open the simple chest and find a healing potion inside. You drink the potion and you feel rejuvenated.");
-				bool inspiration = true;
+				inspiration = true;
 				break;
 			}
 		}
@@ -576,7 +576,7 @@ void gameroom30(void)
 					puts("The chimera flies off but you see something that was dropped by the goblins.");
 					int randomLoot = rand() % 5;
 					puts(loot[randomLoot]);
-					string aquiredItem = loot[randomLoot];
+					char *aquiredItem = loot[randomLoot];
 					friendship = false;
 				}
 				else if(inspiration)
@@ -586,7 +586,7 @@ void gameroom30(void)
 					puts("Through your fatigue you see something that was dropped by the goblins.");
 					int randomLoot = rand() % 5;
 					puts(loot[randomLoot]);
-					string aquiredItem = loot[randomLoot];
+					char *aquiredItem = loot[randomLoot];
 					inspiration = false;
 					fatigue = true;
 				}
